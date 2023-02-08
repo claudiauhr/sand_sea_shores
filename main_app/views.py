@@ -12,6 +12,10 @@ def shores_index(request):
     shores = Shore.objects.all()
     return render(request, 'shores/index.html', {'shores': shores})
 
+def shores_detail(request, shore_id):
+    shore = Shore.objects.get(id=shore_id)
+    return render(request, 'shores/detail.html', {'shore': shore})
+
 # class Shore:
 #     def __init__(self, name, place, description):
 #         self.name = name
