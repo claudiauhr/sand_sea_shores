@@ -9,6 +9,10 @@
     <p>Place: {{ shore.place }}</p>
     <p>Description: {{ shore.description }}</p>
   </div>
+  <div class="card-action">
+    <a href="{% url 'shores_update' shore.id %}">Edit</a>
+    <a href="{% url 'shores_delete' shore.id %}">Delete</a>
+  </div>
 </div>
 
 {% endblock %}

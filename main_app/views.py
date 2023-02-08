@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import CreateView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import Shore
 
 # class Shore:
@@ -33,4 +33,13 @@ class ShoreCreate(CreateView):
     model = Shore
     fields = '__all__'
     success_url = '/shores/'
-    
+
+class ShoreUpdate(UpdateView):
+    model = Shore
+    fields = '__all__'
+
+
+class ShoreDelete(DeleteView):
+    model = Shore
+    success_url = '/shores/'
+
