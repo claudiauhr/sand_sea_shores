@@ -6,3 +6,5 @@ urlpatterns = [
     path('about/', views.about, name='about'),
     path('shores/', views.shores_index, name='index'),
 ]
+
+# superuser: admin/abc123
