@@ -32,3 +32,5 @@ def shores_detail(request, shore_id):
 class ShoreCreate(CreateView):
     model = Shore
     fields = '__all__'
+    success_url = '/shores/'
+    
