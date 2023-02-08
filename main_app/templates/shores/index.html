@@ -5,7 +5,7 @@
 {% for shore in shores %}
 
 <div class="card">
-    <a href="{{ url 'detail' shore.id }}">
+    <a href="{% url 'detail' shore.id %}">
     <div class="card-content">
         <span class="card-title">{{ shore.name }}</span>
         <p>Place: {{ shore.place }}</p>

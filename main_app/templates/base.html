@@ -27,8 +27,9 @@
             </li>
           </ul>
           <ul class="right">
-            <li><a href="/about">About</a></li>
-            <li><a href="/shores">All Shores</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
+            <li><a href="{% url 'shores_create' %}">Add Shores</a></li>
+            <li><a href="{% url 'index' %}">My Shores</a></li>
           </ul>
         </div>
       </nav>
