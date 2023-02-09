@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import Shore
 from .forms import FeedingForm
@@ -20,6 +20,17 @@ def shores_detail(request, shore_id):
         'shore': shore,
         'feeding_form': feeding_form
     })
+
+def add_feeding(request, shore_id):
+    form = FeedingForm(request.POST)
+    if form.is_valid():
+        new_feeding = form.save(commit=False)
+        new_feeding.shore_id = shore_id
+        new_feeding.save()
+    return redirect('detail', shore_id=shore_id)
+
+
+
 
 class ShoreCreate(CreateView):
     model = Shore

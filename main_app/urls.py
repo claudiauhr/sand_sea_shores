@@ -9,6 +9,7 @@ urlpatterns = [
     path('shores/create/', views.ShoreCreate.as_view(), name='shores_create'),
     path('shores/<int:pk>/update/', views.ShoreUpdate.as_view(), name='shores_update'),
     path('shores/<int:pk>/delete/', views.ShoreDelete.as_view(), name='shores_delete'),
+    path('shores/<int:shore_id>/add_feeding/', views.add_feeding, name='add_feeding'),
 ]
 
 # superuser: admin/abc123
