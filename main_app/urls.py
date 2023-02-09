@@ -1,5 +1,5 @@
 from django.urls import path
-from . import views
+from .import views
 
 urlpatterns = [
     path('', views.home, name='home'),
@@ -12,3 +12,6 @@ urlpatterns = [
 ]
 
 # superuser: admin/abc123
+# ToDo: 2nd CRUD from Lecture: SEIR 11/14 Classroom WK11 D3
+# Intro to Django One-to-Many Relationships
+

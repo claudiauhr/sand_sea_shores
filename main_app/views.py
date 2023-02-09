@@ -1,19 +1,7 @@
 from django.shortcuts import render
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import Shore
-
-# class Shore:
-#     def __init__(self, name, place, description):
-#         self.name = name
-#         self.place = place
-#         self.description = description
-
-# shores = [
-#     Shore('Porto de Galinhas', 'Ipojuca', 'Lorem ipsum dolor sit amet.'),
-#     Shore('Porto de Galinhas2', 'Ipojuca', 'Lorem ipsum dolor sit amet.'),
-#     Shore('Porto de Galinhas3', 'Ipojuca', 'Lorem ipsum dolor sit amet.'),
-#     Shore('Porto de Galinhas4', 'Ipojuca', 'Lorem ipsum dolor sit amet.')
-# ]
+from .forms import FeedingForm
 
 def home(request):
     return render(request, 'home.html')
@@ -27,7 +15,11 @@ def shores_index(request):
 
 def shores_detail(request, shore_id):
     shore = Shore.objects.get(id=shore_id)
-    return render(request, 'shores/detail.html', {'shore': shore})
+    feeding_form = FeedingForm()
+    return render(request, 'shores/detail.html', {
+        'shore': shore,
+        'feeding_form': feeding_form
+    })
 
 class ShoreCreate(CreateView):
     model = Shore
