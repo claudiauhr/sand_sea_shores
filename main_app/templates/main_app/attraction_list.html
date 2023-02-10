@@ -1,0 +1,14 @@
+
+{% extends 'base.html' %} {% block content %}
+
+<h1>Attractions</h1>
+
+{% for attraction in attractions %}
+<div class="card">
+  <a href="{{ attraction.name }}" >
+    <div class="card-content">
+      <span class="card-title">A <span class=""> </span> </span>
+    </div>
+  </a>
+</div>
+{% endfor %} {% endblock %}

@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
-from .models import Shore
+from django.views.generic import ListView, DetailView
+from .models import Shore, Attraction
 from .forms import FeedingForm
 
 def home(request):
@@ -45,4 +46,21 @@ class ShoreUpdate(UpdateView):
 class ShoreDelete(DeleteView):
     model = Shore
     success_url = '/shores/'
+
+class AttractionIndex(ListView):
+    model = Attraction
+    template_name = 'main_app/attraction_list.html'
+    context_object_name = 'attractions'
+
+
+class AttractionDetail(DetailView):
+    model = Attraction
+   
+
+class AttractionCreate(ListView):
+    model = Attraction
+    fields = '__all__'
+
+
+
 
