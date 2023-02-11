@@ -35,7 +35,7 @@ def add_feeding(request, shore_id):
 
 class ShoreCreate(CreateView):
     model = Shore
-    fields = '__all__'
+    fields = ('name', 'place', 'description')
     success_url = '/shores/'
 
 class ShoreUpdate(UpdateView):

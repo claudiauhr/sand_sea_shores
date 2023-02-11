@@ -15,7 +15,5 @@ urlpatterns = [
     path('attractions/<int:pk>/', views.AttractionDetail.as_view(), name='attractions_detail'),
 ]
 
-# superuser: admin/abc123
-# ToDo: 3nd CRUD from Lecture: Toy_Index_page
-# Intro to Django One-to-Many Relationships
+
 
