@@ -9,13 +9,17 @@ urlpatterns = [
     path('shores/create/', views.ShoreCreate.as_view(), name='shores_create'),
     path('shores/<int:pk>/update/', views.ShoreUpdate.as_view(), name='shores_update'),
     path('shores/<int:pk>/delete/', views.ShoreDelete.as_view(), name='shores_delete'),
-    path('shores/<int:shore_id>/add_feeding/', views.add_feeding, name='add_feeding'),
     path('attractions/create/', views.AttractionCreate.as_view(), name='attractions_create'),
     path('attractions/', views.AttractionsIndex.as_view(), name='attractions_index'),
     path('attractions/<int:pk>/', views.AttractionsDetail.as_view(), name='attractions_detail'),
     path('attractions/<int:pk>/update/', views.AttractionUpdate.as_view(), name='attractions_update'),
     path('attractions/<int:pk>/delete/', views.AttractionDelete.as_view(), name='attractions_delete'),
+    path('attractions/<int:attraction_id>/add_feeding/', views.add_feeding, name='add_feeding'),
+
 ]
+
+
+#  FAZER: attractions date is not working
 
 
 

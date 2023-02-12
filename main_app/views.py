@@ -16,22 +16,28 @@ def shores_index(request):
 
 def shores_detail(request, shore_id):
     shore = Shore.objects.get(id=shore_id)
-    feeding_form = FeedingForm()
     return render(request, 'shores/detail.html', {
         'shore': shore,
-        'feeding_form': feeding_form
     })
 
-def add_feeding(request, shore_id):
+def add_feeding(request, attraction_id):
     form = FeedingForm(request.POST)
     if form.is_valid():
         new_feeding = form.save(commit=False)
-        new_feeding.shore_id = shore_id
+        new_feeding.attraction_id = attraction_id
         new_feeding.save()
-    return redirect('detail', shore_id=shore_id)
+    return redirect('attractions/detail', attraction_id=attraction_id)
 
 
-
+def attraction_detail(request, attraction_id):
+        attraction = Attraction.objects.get(id=attraction_id)
+        feeding_form = FeedingForm()
+        return render(request, 'templates/main_app/attraction_detail.html', {
+            'attraction': attraction,
+            'feeding_form': feeding_form
+        })
+# FAZER: https://seir-1114.netlify.app/second-language/week-2/day-3/lecture-materials/intro-to-django-one-to-many-relationships#displaying-feedingform-inside-of-detailhtml
+#  display not showing
 
 class ShoreCreate(CreateView):
     model = Shore
