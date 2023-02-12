@@ -40,27 +40,34 @@ class ShoreCreate(CreateView):
 
 class ShoreUpdate(UpdateView):
     model = Shore
-    fields = '__all__'
+    fields = ['place', 'description']
 
 
 class ShoreDelete(DeleteView):
     model = Shore
     success_url = '/shores/'
 
-class AttractionIndex(ListView):
+class AttractionsIndex(ListView):
     model = Attraction
-    template_name = 'main_app/attraction_list.html'
-    context_object_name = 'attractions'
 
 
-class AttractionDetail(DetailView):
+class AttractionsDetail(DetailView):
     model = Attraction
    
 
-class AttractionCreate(ListView):
+class AttractionCreate(CreateView):
     model = Attraction
     fields = '__all__'
 
+
+class AttractionUpdate(UpdateView):
+    model = Attraction
+    fields = '__all__'
+
+
+class AttractionDelete(DeleteView):
+    model = Attraction
+    success_url = '/attractions/'
 
 
 

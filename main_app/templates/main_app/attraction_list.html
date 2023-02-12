@@ -1,13 +1,16 @@
-
 {% extends 'base.html' %} {% block content %}
 
 <h1>Attractions</h1>
 
-{% for attraction in attractions %}
+{% for attraction in object_list %}
+
 <div class="card">
-  <a href="{{ attraction.name }}" >
+  <a href="{% url 'attractions_detail' attraction.id %}" >
     <div class="card-content">
-      <span class="card-title">A <span class=""> </span> </span>
+    <span class="card-title">A 
+      <span class="{{attraction.fun_type.lower}}-text">{{ attraction.fun_type.capitalize }}
+      </span> {{ attraction.name }}
+    </span>
     </div>
   </a>
 </div>

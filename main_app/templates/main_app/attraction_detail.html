@@ -1,17 +1,18 @@
 {% extends 'base.html' %} {% block content %}
 
-<h1>Toy Details</h1>
+<h1>Attraction Details</h1>
 
 <div class="card">
-    <a href="{{ attraction.id }}">
+    <a href="{% url 'attractions_detail' attraction.id %}">
         <div class="card-content">
-            
+            <span class="card-title">A <span class="{{attraction.fun_type.lower}}-text">{{ attraction.fun_type.capitalize }}</span>
+                {{ attraction.name }}</span>
         </div>
     </a>
-    <!-- <div class="card-action">
-        <a href="{% url 'toys_update' toy.id %}">Edit</a>
-        <a href="{% url 'toys_delete' toy.id %}">Delete</a>
-    </div> -->
+    <div class="card-action">
+        <a href="{% url 'attractions_update' attraction.id %}">Edit</a>
+        <a href="{% url 'attractions_delete' attraction.id %}">Delete</a>
+    </div>
 </div>
 
 {% endblock %}
