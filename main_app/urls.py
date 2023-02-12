@@ -15,11 +15,12 @@ urlpatterns = [
     path('attractions/<int:pk>/update/', views.AttractionUpdate.as_view(), name='attractions_update'),
     path('attractions/<int:pk>/delete/', views.AttractionDelete.as_view(), name='attractions_delete'),
     path('attractions/<int:attraction_id>/add_feeding/', views.add_feeding, name='add_feeding'),
-
+    path('accounts/signup/', views.signup, name='signup'),
 ]
 
 
-#  FAZER: attractions date is not working
+# FAZER: attractions date is not working
+# FAZER: Heroku deploy
 
 
 
