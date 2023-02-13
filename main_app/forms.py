@@ -1,8 +1,8 @@
 from django.forms import ModelForm
-from .models import Feeding
+from .models import Reservation
 
-class FeedingForm(ModelForm):
+class ReservationForm(ModelForm):
     class Meta:
-        model = Feeding
+        model = Reservation
         fields = ('date', 'meal')
 

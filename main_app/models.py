@@ -29,7 +29,7 @@ class Shore(models.Model):
         return reverse("detail", kwargs={"shore_id": self.id})
     
 
-class Feeding(models.Model):
+class Reservation(models.Model):
     MEALS = (
         ('B', 'Brunch'),
         ('L', 'Lunch'),
@@ -45,5 +45,8 @@ class Feeding(models.Model):
     class Meta:
         ordering = ('-date',)
 
+class Image(models.Model):
+    title = models.CharField(max_length=20)
+    photo = models.ImageField(upload_to='pics')
 
 

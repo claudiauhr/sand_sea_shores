@@ -2,11 +2,12 @@ from django.shortcuts import render, redirect
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic import ListView, DetailView
 from .models import Shore, Attraction
-from .forms import FeedingForm
+from .forms import ReservationForm
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.urls import reverse
 
 
 
@@ -29,13 +30,13 @@ def shores_detail(request, shore_id):
     })
 
 @login_required
-def add_feeding(request, attraction_id):
-    form = FeedingForm(request.POST)
+def add_reservation(request, attraction_id):
+    form = ReservationForm(request.POST)
     if form.is_valid():
-        new_feeding = form.save(commit=False)
-        new_feeding.attraction_id = attraction_id
-        new_feeding.save()
-    return redirect('attractions/detail', attraction_id=attraction_id)
+        new_reservation = form.save(commit=False)
+        new_reservation.attraction_id = attraction_id
+        new_reservation.save()
+    return redirect(reverse('attractions_index'))
 
 
 @login_required
@@ -48,12 +49,12 @@ def attractions_index(request):
 @login_required
 def attraction_detail(request, attraction_id):
     attraction = Attraction.objects.get(id=attraction_id)
-    feeding_form = FeedingForm()
+    reservation_form = ReservationForm()
     return render(request, 'main_app/attraction_detail.html', {
         'attraction': attraction,
-        'feeding_form': feeding_form
+        'reservation_form': reservation_form
     })
-# FAZER: https://seir-1114.netlify.app/second-language/week-2/day-3/lecture-materials/intro-to-django-one-to-many-relationships#displaying-feedingform-inside-of-detailhtml
+# FAZER: https://seir-1114.netlify.app/second-language/week-2/day-3/lecture-materials/intro-to-django-one-to-many-relationships#displaying-reservationform-inside-of-detailhtml
 #  display not showing
 
 
