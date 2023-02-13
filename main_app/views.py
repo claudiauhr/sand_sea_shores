@@ -44,7 +44,7 @@ def attractions_index(request):
     attractions = Attraction.objects.filter(user=request.user)
     return render(request, 'main_app/attraction_detail.html')
     
-# FAZER: still showing for all logins
+
 
 @login_required
 def attraction_detail(request, attraction_id):
@@ -54,8 +54,6 @@ def attraction_detail(request, attraction_id):
         'attraction': attraction,
         'reservation_form': reservation_form
     })
-# FAZER: https://seir-1114.netlify.app/second-language/week-2/day-3/lecture-materials/intro-to-django-one-to-many-relationships#displaying-reservationform-inside-of-detailhtml
-#  display not showing
 
 
 def signup(request):

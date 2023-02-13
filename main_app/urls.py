@@ -19,8 +19,8 @@ urlpatterns = [
 ]
 
 
-# FAZER: attractions date is not working
-# FAZER: Heroku deploy
+
+
 
 
 
