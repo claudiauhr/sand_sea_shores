@@ -1,6 +1,5 @@
 # Sand Sea Shores
 
-
 ## Description
 
 A web-based application to create a post about sea and shore places and attractions. You can organize your vacations by choosing places, foods, and places to relax or have fun in advance.
@@ -18,8 +17,11 @@ A web-based application to create a post about sea and shore places and attracti
 
 ## Screenshots
 
-![my wireframe](#)
-![working version](#)
+![my erd](static/erd.png)
+![my wireframe](static/wireframe.png)
+![working version](static/about.png)
+![working version](static/login.png)
+![working version](static/signup.png)
 
 ## Getting started
 
