@@ -7,18 +7,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Sand, Sea and Shores</title>
-    <!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=WindSong:wght@500&display=swap"
+      rel="stylesheet"
+    />
 
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     />
-    <link 
-        rel="stylesheet" 
-        type="text/css" 
-        href="{% static 'css/style.css' %}" 
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/styles.css' %}"
     />
+    <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   </head>
   <body>
@@ -35,8 +41,12 @@
             {% if user.is_authenticated %}
             <li><a href="{% url 'shores_create' %}">Add Shores</a></li>
             <li><a href="{% url 'index' %}">My Shores</a></li>
-            <li><a href="{% url 'attractions_create' %}">Add a Attraction</a></li>
-            <li><a href="{% url 'attractions_index' %}">View all Attractions</a></li>
+            <li>
+              <a href="{% url 'attractions_create' %}">Add a Attraction</a>
+            </li>
+            <li>
+              <a href="{% url 'attractions_index' %}">View all Attractions</a>
+            </li>
             <li><a href="{% url 'logout' %}">Logout</a></li>
             {% else %}
             <li><a href="{% url 'login' %}">Login</a></li>
@@ -48,15 +58,11 @@
     </header>
     <main class="container">{% block content %} {% endblock %}</main>
     <footer class="page-footer blue accent-1">
-      <div class="center">
-        All Rights Reserved, © 2023 Sand, Sea and Shores  
-      </div>
+      <div class="center">All Rights Reserved, © 2023 Sand, Sea and Shores</div>
     </footer>
   </body>
 </html>
 
-
 <!-- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sagittis neque neque, 
   et malesuada ipsum laoreet eget. Morbi elementum, neque dignissim pulvinar dictum, 
   elit erat bibendum tellus, vel luctus neque dolor suscipit arcu. -->
-

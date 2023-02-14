@@ -17,11 +17,11 @@ A web-based application to create a post about sea and shore places and attracti
 
 ## Screenshots
 
-![my erd](static/erd.png)
-![my wireframe](static/wireframe.png)
-![working version](static/about.png)
-![working version](static/login.png)
-![working version](static/signup.png)
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/TBH0DS3/Screenshot-2023-02-06-at-3-10-19-PM.png" alt="Screenshot-2023-02-06-at-3-10-19-PM" width="200"></a> <a href="https://ibb.co/0h3K4Kv"><img src="https://i.ibb.co/bznFwFD/Screenshot-2023-02-06-at-3-14-22-PM.png" alt="Screenshot-2023-02-06-at-3-14-22-PM" width="200"></a>
+
+<a href="https://ibb.co/L0L36Nh"><img src="https://i.ibb.co/x2pNGF8/home.png" alt="home" width="500"></a>
+
+<a href="https://ibb.co/gyZPg8X"><img src="https://i.ibb.co/CBKM0yX/about.png" alt="about" width="500"></a>
 
 ## Getting started
 
