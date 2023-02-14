@@ -78,6 +78,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'sand_sea_shores',
+        'USER': 'claudiauhr/sand_sea_shores',
+        'PASSWORD': 'v2_3z8Nj_6eU4vHMcCz5tPRPAJ4896Dc',
+        'HOST': 'db.bit.io',
+        'PORT': '5432',
     }
 }
 
