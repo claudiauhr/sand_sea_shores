@@ -25,7 +25,7 @@ A web-based application to create a post about sea and shore places and attracti
 
 ## Getting started
 
-[Click here](#) to visit the deployed app!
+[Click here](https://sandseashores.herokuapp.com/) to visit the deployed app!
 
 ## Future Enhancements
 
