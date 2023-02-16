@@ -43,7 +43,7 @@
         </tr>
       </thead>
       <tbody>
-        {% for reservation in attractions.reservation_set.all %}
+        {% for reservation in attraction.reservation_set.all %}
         <tr>
           <td>{{ reservation.date }}</td>
           <td>{{ reservation.get_meal_display }}</td>
