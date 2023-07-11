@@ -32,5 +32,5 @@ A web-based application to create a post about sea and shore places and attracti
 - Adding pictures.
 - Update the connections between shores/attractions.
 - Adding a feature near me for shores/attractions.
-- Create a search food places by local and rating.
-- Adding a seasonal attractions like festivities, theater, etc.
+- Create a search for food places by local and rating.
+- Adding seasonal attractions like festivities, theater, etc.
