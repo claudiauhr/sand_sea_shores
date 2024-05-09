@@ -2,7 +2,7 @@
 
 ## Description
 
-A web-based application to create a post about sea and shore places and attractions. You can organize your vacations by choosing places, foods, and places to relax or have fun in advance.
+This is a web-based application for creating a post about sea and shore places and attractions. You can organize your vacations by choosing places to eat, relax, or have fun in advance.
 
 ## Technologies Used
 
