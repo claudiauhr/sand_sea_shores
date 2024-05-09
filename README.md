@@ -13,7 +13,6 @@ This is a web-based application for creating a post about sea and shore places a
 - Django
 - Git/GitHub
 - PostgreSQL
-- Heroku
 
 ## Screenshots
 
@@ -25,7 +24,7 @@ This is a web-based application for creating a post about sea and shore places a
 
 ## Getting started
 
-[Click here](https://sandseashores.herokuapp.com/) to visit the deployed app!
+Soon, visit the deployed app! //
 
 ## Future Enhancements
 
